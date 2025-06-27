@@ -1,4 +1,6 @@
+import { NextResponse } from "next/server";
 import clientPromise from "@/app/lib/mongodb";
+
 
 export async function POST(request) {
 
@@ -10,21 +12,21 @@ export async function POST(request) {
 
     // Check if inputs are empty
     if (body.url.trim() === "" || body.shorturl.trim() === "") {
-        return Response.json({ success: false, error: true, message: 'Missing Inputs from server' });
+        return NextResponse.json({ success: false, error: true, message: 'Missing Inputs from server' });
     }
 
     // Check if URL already exists
     const doc = await collection.findOne({ shorturl: body.shorturl });
     if (doc) {
-        return Response.json({ success: false, error: true, message: 'URL Already Exists' });
+        return NextResponse.json({ success: false, error: true, message: 'URL Already Exists' });
     }
 
     // Inserting urls and shorturls in the database
-    const result = await collection.insertOne({
+    await collection.insertOne({
         url: body.url,
         shorturl: body.shorturl
     })
 
-    return Response.json({ success: true, error: false, message: 'URL Generated Successfully' });
-    
+    return NextResponse.json({ success: true, error: false, message: 'URL Generated Successfully' });
+
 }

@@ -1,5 +1,6 @@
 import clientPromise from "@/app/lib/mongodb";
 
+
 export async function GET() {
 
     const client = await clientPromise;
