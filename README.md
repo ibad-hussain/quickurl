@@ -30,7 +30,7 @@
 ## 🚀 Deployment
 The app is deployed on <b>Vercel</b> and can be accessed via:
 <br>
-https://connect-share-it.vercel.app/
+https://quickurl-shortener.vercel.app/
 
 <br>
 
