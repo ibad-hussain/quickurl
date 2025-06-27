@@ -26,7 +26,7 @@ export default function Home() {
           Turn Long Links into QuickURLs
         </p>
         <p className={styles.home_top_subheading}>
-          QuickURL makes your links compact, beautiful, and trackable. Whether you're sharing on social media, in emails, or text messages—do it faster and smarter.
+          QuickURL makes your links compact, beautiful, and trackable. Whether you&apos;re sharing on social media, in emails, or text messages—do it faster and smarter.
         </p>
 
         <div className={styles.home_top_btn}>

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import toast from "react-hot-toast";
 
 
-const page = () => {
+const Page = () => {
 
     const [url, setUrl] = useState("");
     const [shorturl, setShorturl] = useState("");
@@ -133,4 +133,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

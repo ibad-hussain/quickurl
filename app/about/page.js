@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from 'next/link';
 
 
-const page = () => {
+const Page = () => {
     return (
         <div className={styles.main_about}>
 
@@ -33,7 +33,7 @@ const page = () => {
     )
 }
 
-export default page
+export default Page
 
 export async function generateMetadata({ params }) {
     return {
